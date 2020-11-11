@@ -1,0 +1,27 @@
+
+
+<section class="breadcumb-area bg-img bg-overlay" style="background-image: url(assets/img/bg-img/breadcumb.jpg);">
+  <div class="bradcumbContent">
+    <p>See what's </p>
+    <h2>YOUR SONG</h2>
+  </div>
+</section>
+<br>
+<br>
+<div style="width: 90%;margin-left: 5%">
+  <h3 style="color: crimson">Delete this song, are you sure?</h3>
+  <br>
+  <br>
+  <h3>Song details:</h3>
+  <div *ngIf="song">
+    <span class="font-weight-bold">Name: </span><span>{{song.name}}</span><br>
+    <span class="font-weight-bold">Artist: </span><span>{{song.artist.name}}</span><br>
+    <span class="font-weight-bold">Description: </span><span>{{song.description}}</span><br>
+  </div>
+  <br>
+  <button class="btn btn-outline-danger" (click)="delete()">Delete</button>
+  <a class="btn btn-outline-primary" [routerLink]="['/personal']" style="margin-left: 2%">Back</a>
+</div>
+
+<br>
+<br>

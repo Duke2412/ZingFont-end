@@ -1,0 +1,56 @@
+
+<section class="breadcumb-area bg-img bg-overlay" style="background-image: url(assets/img/bg-img/breadcumb.jpg);">
+  <div class="bradcumbContent">
+    <p>See what's </p>
+    <h2>NEW SONG</h2>
+  </div>
+</section>
+<br>
+<br>
+<table class="table" style="width: 80%;margin-left: 10%">
+  <thead>
+  <tr>
+    <th scope="col">#</th>
+    <th scope="col">Img</th>
+    <th scope="col">Name</th>
+    <th scope="col">Add Playlist</th>
+    <th scope="col">Play</th>
+  </tr>
+  </thead>
+  <tbody >
+  <tr *ngFor="let p of songListDate30; index as i" >
+    <th scope="row">{{i + 1}}</th>
+    <td><img src="{{p.cover_art_url}}" alt="" width="50px" height="50px"></td>
+    <td> <a [routerLink]="'/detail/' + p.songId"  >
+      <h6>{{p.name}}</h6>
+    </a></td>
+    <td>
+      <div class="dropdown">
+      <a class="btn btn-link dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      </a>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+        <div *ngIf="loginRequest!=null; else tmp">
+          <a class="dropdown-item" style="color:#000000" [routerLink]="'/createPlaylist'">New Playlist  +</a>
+          <div class="dropdown-divider"  ></div>
+          <div *ngFor="let pr of playList">
+            <a class="dropdown-item" style="color:#6c757d" (click)="addPlaylistSong(p, pr)">{{pr.name}}</a>
+          </div>
+        </div>
+        <ng-template #tmp>
+          <p>Please Login...</p>
+        </ng-template>
+      </div>
+      </div>
+    </td>
+    <td>
+      <div >
+<!--        <button id="play"><i id="playbutton" (click)="playSong(p.songId)" class="fa fa-pause" ></i></button>-->
+        <button class="btn btn-outline-primary" (click)="playSong(p.songId)"><img
+          src="../../assets/img/bg-img/control+media+multimedia+music+options+play+play+button+player-1320185653542985681.png"
+          height="25" width="25"/></button>
+      </div>
+    </td>
+  </tr>
+  </tbody>
+</table>
+<router-outlet></router-outlet>

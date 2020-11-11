@@ -1,0 +1,20 @@
+<div class="row">
+
+  <!-- Single Album Area -->
+  <div class="col-12 col-sm-6 col-md-4 col-lg-2" *ngFor="let p of songListLike6">
+    <div class="single-album-area wow fadeInUp" data-wow-delay="100ms">
+      <div class="album-thumb">
+        <img *ngIf="p!= null && p.cover_art_url" src="{{p.cover_art_url}}" alt="">
+        <div class="play-icon">
+          <a [routerLink]="''" class="video--play--btn" (click)="playSong(p.songId, $event)"><span class="icon-play-button"></span></a>
+        </div>
+      </div>
+      <div class="album-info" *ngIf="p!= null">
+        <a [routerLink]="'/detail/' + p.songId">
+          <h5>{{p.name}}</h5>
+        </a>
+        <p>{{p.artist.name}}</p>
+      </div>
+    </div>
+  </div>
+</div>

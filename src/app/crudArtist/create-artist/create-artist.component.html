@@ -1,0 +1,27 @@
+
+<section class="breadcumb-area bg-img bg-overlay" style="background-image: url(assets/img/bg-img/breadcumb.jpg);">
+  <div class="bradcumbContent">
+    <p>See what's </p>
+    <h2>NEW ARTIST</h2>
+  </div>
+</section>
+<br>
+<br>
+<form [formGroup]= "artistFrom" style="width: 80%; margin-left: 10%; margin-top:3%">
+  <div class="form-group">
+    <label>Song Name</label>
+    <input type="text" class="form-control" formControlName="name" placeholder="Enter name">
+    <div *ngIf="name.invalid && (name.dirty || name.touched)"
+         class="alert alert-danger">
+      <div *ngIf="name.errors.required">
+        Song Name Not Empty
+      </div>
+    </div>
+
+  </div>
+  <button  class="btn btn-success" [routerLink]="['/artist']" style="float:right">Exit</button>
+  <button type="submit" [disabled]="checkform()"  class="btn btn-primary"
+          (click)="summit()" style="float:right; margin-right:1%">Submit</button>
+</form>
+<br>
+<br>

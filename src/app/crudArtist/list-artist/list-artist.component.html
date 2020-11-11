@@ -1,0 +1,40 @@
+<section class="breadcumb-area bg-img bg-overlay" style="background-image: url(assets/img/bg-img/breadcumb.jpg);">
+  <div class="bradcumbContent">
+    <p>See what's </p>
+    <h2>ARTIST MANAGE</h2>
+  </div>
+</section>
+<br>
+<br>
+<div style="width: 90%;margin-left: 5%">
+  <h3>List artist </h3>
+  <div *ngIf="loginRequest; else smp">
+    <div>
+      <div *ngIf="loginRequest.username === 'admin'; else dmp">
+        <a [routerLink]="'/createArtist'" style="float: right; margin-right: 3%">+Create New Artist</a>
+      </div>
+      <ng-template #dmp>
+      </ng-template>
+    </div>
+  </div>
+  <ng-template #smp>
+  </ng-template>
+      <p>have {{artists.length}} Artist</p>
+      <table class="table table-bordered table-hover" style="margin-top: 3%">
+        <thead>
+        <tr>
+          <td>#</td>
+          <td>Name</td>
+          <td>Action</td>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let item of artists; index as i">
+          <td>{{i + 1}}</td>
+          <td>{{item.name}}</td>
+          <td><a [routerLink]="'/listByArtist/' + item.id">View All Of Songs</a></td>
+        </tr>
+        </tbody>
+      </table>
+</div>
+<router-outlet></router-outlet>

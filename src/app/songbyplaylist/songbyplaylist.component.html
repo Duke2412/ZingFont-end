@@ -1,0 +1,42 @@
+
+
+<section class="breadcumb-area bg-img bg-overlay" style="background-image: url(assets/img/bg-img/breadcumb.jpg);">
+  <div class="bradcumbContent">
+    <p>See what's </p>
+    <h2>List Song</h2>
+  </div>
+</section>
+<br>
+<br>
+<table class="table" style="width: 80%;margin-left: 10%">
+  <thead>
+  <tr>
+    <th scope="col">#</th>
+    <th scope="col">Img</th>
+    <th scope="col">Name</th>
+    <th scope="col">Play</th>
+    <th scope="col" *ngIf=" loginRequest != null && loginRequest.id == playlist.user.userId">Action</th>
+  </tr>
+  </thead>
+  <tbody >
+  <tr *ngFor="let p of songs; index as i" >
+    <th scope="row">{{i + 1}}</th>
+    <td><img src="{{p.cover_art_url}}" alt="" width="50px" height="50px"></td>
+    <td> <a [routerLink]="'/detail/' + p.songId"  >
+      <h6>{{p.name}}</h6>
+    </a>
+    </td>
+    <td>
+      <button class="fa fa-play" (click)="playSong(p.songId)"></button>
+    </td>
+    <td>
+      <div *ngIf=" loginRequest != null && loginRequest.id == playlist.user.userId; else msp">
+        <button  class="btn btn-danger"  (click)="delete(p)">Delete</button>
+      </div>
+      <ng-template #msp>
+      </ng-template>
+    </td>
+  </tr>
+  </tbody>
+</table>
+<router-outlet></router-outlet>

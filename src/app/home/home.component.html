@@ -1,0 +1,91 @@
+
+
+<!--Carousel Wrapper-->
+<div id="video-carousel-example" class="carousel slide carousel-fade" data-ride="carousel">
+  <!--Indicators-->
+  <ol class="carousel-indicators">
+    <li data-target="#video-carousel-example" data-slide-to="0" class="active"></li>
+    <li data-target="#video-carousel-example" data-slide-to="1"></li>
+    <li data-target="#video-carousel-example" data-slide-to="2"></li>
+  </ol>
+  <!--/.Indicators-->
+  <!--Slides-->
+  <div class="carousel-inner" role="listbox">
+    <div class="carousel-item active">
+      <video class="video-fluid" autoplay loop muted>
+        <source src="https://firebasestorage.googleapis.com/v0/b/airbnbtdd.appspot.com/o/videoplayback%20(1).mp4?alt=media&token=dc4779b3-f517-44a8-91f2-8617ebfcf2a8" type="video/mp4" />
+      </video>
+    </div>
+    <div class="carousel-item">
+      <video class="video-fluid" autoplay loop muted>
+        <source src="https://firebasestorage.googleapis.com/v0/b/airbnbtdd.appspot.com/o/videoplayback.mp4?alt=media&token=593e0d74-bf4b-46be-bfd6-65d8e23f6839" type="video/mp4" />
+      </video>
+    </div>
+    <div class="carousel-item">
+      <video class="video-fluid" autoplay loop muted>
+        <source src="https://firebasestorage.googleapis.com/v0/b/airbnbtdd.appspot.com/o/videoplayback%20(2).mp4?alt=media&token=6e77cac7-ec1a-482c-bec3-2c5cfbf6a35b" type="video/mp4" />
+      </video>
+    </div>
+  </div>
+  <!--/.Slides-->
+  <!--Controls-->
+  <a class="carousel-control-prev" href="#video-carousel-example" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#video-carousel-example" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+  <!--/.Controls-->
+</div>
+<!--Carousel Wrapper-->
+<section class="oneMusic-buy-now-area has-fluid bg-gray section-padding-100">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12">
+        <div class="section-heading style-2">
+          <p>See what’s new</p>
+          <h2>New Song</h2>
+        </div>
+      </div>
+    </div>
+    <app-baimoitao (changeSong)="onChanges()"></app-baimoitao>
+    <div class="row">
+      <div class="col-12">
+        <div class="load-more-btn text-center wow fadeInUp" data-wow-delay="300ms">
+          <a [routerLink]="'/newSong30'" class="btn oneMusic-btn">See More <i class="fa fa-angle-double-right"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <div class="section-heading style-2">
+          <p>See what’s new</p>
+          <h2>The Most Listened Songs</h2>
+
+        </div>
+      </div>
+    </div>
+    <app-nghenhieunhat (changeSongNgheNhieu)="onChanges()"></app-nghenhieunhat>
+    <div class="row">
+      <div class="col-12">
+        <div class="load-more-btn text-center wow fadeInUp" data-wow-delay="300ms">
+          <a [routerLink]="'/top30'" class="btn oneMusic-btn">See More <i class="fa fa-angle-double-right"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <div class="section-heading style-2">
+          <p>See what’s new</p>
+          <h2>The Most Liked Songs</h2>
+        </div>
+      </div>
+    </div>
+    <app-likenhieunhat10bai (changeSongLike)="onChanges()"></app-likenhieunhat10bai>
+
+  </div>
+
+</section>
+<router-outlet></router-outlet>

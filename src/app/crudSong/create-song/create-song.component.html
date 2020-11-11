@@ -1,0 +1,68 @@
+<section class="breadcumb-area bg-img bg-overlay" style="background-image: url(assets/img/bg-img/breadcumb.jpg);">
+  <div class="bradcumbContent">
+    <p>See what's </p>
+    <h2>NEW SONG</h2>
+  </div>
+</section>
+<br>
+<br>
+<form [formGroup]= "songForm" style="width: 60%; margin-left: 20%; margin-top:3%">
+  <div class="form-group">
+    <label>Song Name</label>
+    <input type="text" class="form-control" formControlName="name" placeholder="Enter name">
+    <div *ngIf="name.invalid && (name.dirty || name.touched)"
+         class="alert alert-danger">
+      <div *ngIf="name.errors.required">
+        Song Name Not Empty
+      </div>
+    </div>
+
+    <div class="form-group" >
+      <label>Artist</label>
+      <select class="form-control" #artist formControlName="artist" (change)="getArtist(artist.value)">
+        <option *ngFor="let item of artists"  [selected]="selectedArtist.id != null && item.id == selectedArtist.id" [value]="item.id" >{{item.name}}</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label>Genre</label>
+      <input type="text" class="form-control" formControlName="genre"  placeholder="Enter genre">
+    </div>
+    <div class="form-group">
+      <label for="exampleInputEmail1">Description</label>
+      <textarea class="form-control " formControlName="description" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter description" rows="2" cols="5"></textarea>
+    </div>
+    <div>
+      <label>Choose Cover Art Photo</label>
+      <input type="file" class="form-control" (change)="checkCoverArtFile($event)" placeholder="Cover Art">
+      <br>
+      <div *ngIf="checkedCoverArtFile" class="alert alert-danger">
+        Just image file only
+      </div>
+      <div *ngIf="message2" class="alert alert-success" style="height:40px">
+        <p style="font-size:20px; margin-top: -15px">{{message2}}</p>
+      </div>
+    </div>
+    <div>
+      <label>Choose Song</label>
+      <input type="file" class="form-control" (change)="checkFile($event)"  placeholder="songFile">
+      <br>
+      <div *ngIf="checkedSongFile" class="alert alert-danger">
+        Just mp3 file only
+      </div>
+    </div>
+    <br>
+    <div class="progress" *ngIf="process$  as progress">
+      <div class="progress-bar progress-bar-animated" [ngStyle]="{ 'width': progress + '%' }"></div>
+    </div>
+    <br>
+    <div *ngIf="message" class="alert alert-success" style="height:40px">
+      <p style="font-size:20px; margin-top: -15px">{{message}}</p>
+    </div>
+  </div>
+  <button  class="btn btn-success" [routerLink]="['/personal']" style="float:right">Exit</button>
+  <button type="submit" [disabled]="checkform()"  class="btn btn-primary"
+          (click)="submit()" style="float:right; margin-right:1%">Submit</button>
+</form>
+<br><br>
+

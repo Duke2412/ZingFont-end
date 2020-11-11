@@ -1,0 +1,50 @@
+<section class="breadcumb-area bg-img bg-overlay" style="background-image: url(assets/img/bg-img/breadcumb.jpg);">
+  <div class="bradcumbContent">
+    <p>See what's </p>
+    <h2>NEW USER</h2>
+  </div>
+</section>
+<br>
+<br>
+<form [formGroup]="userForm" style="width: 80%; margin-left: 10%; margin-top:3%">
+  <div class="form-group">
+    <label>User Name:</label>
+    <input type="text" class="form-control" formControlName="name" placeholder="Enter name">
+    <div *ngIf="nameUser.invalid && (nameUser.dirty || nameUser.touched)"
+         class="alert alert-danger">
+      <div *ngIf="nameUser.errors.required">
+        User Name Not Empty
+      </div>
+    </div>
+  </div>
+  <div class="form-group">
+    <label>Email:</label>
+    <input type="text" class="form-control" formControlName="email" placeholder="Enter email">
+    <div *ngIf="emailUser.invalid && (nameUser.dirty || nameUser.touched)"
+         class="alert alert-danger">
+      <div *ngIf="emailUser.errors.required">
+        Email Not Empty
+      </div>
+      <div *ngIf="emailUser.errors.email">
+        Invalid email
+      </div>
+    </div>
+    <label>Password:</label>
+    <input type="password" class="form-control" formControlName="password" placeholder="Enter password">
+    <div *ngIf="passWordUser.invalid && (nameUser.dirty || nameUser.touched)"
+         class="alert alert-danger">
+      <div *ngIf="passWordUser.errors.required">
+        Password Not Empty
+      </div>
+    </div>
+  </div>
+
+  <br>
+  <button class="btn btn-success" [routerLink]="['']" style="float:right">Exit</button>
+  <button type="submit" class="btn btn-primary" (click)="createUser()"
+          style="float:right; margin-right:1%" [routerLink]="['/login']">Save
+  </button>
+</form>
+<br><br>
+
+

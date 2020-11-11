@@ -1,0 +1,26 @@
+<section class="breadcumb-area bg-img bg-overlay" style="background-image: url(assets/img/bg-img/breadcumb.jpg);">
+  <div class="bradcumbContent">
+    <p>See what's </p>
+    <h2>All PlayLists</h2>
+  </div>
+</section>
+<br>
+<br>
+<table class="table" style="width: 80%;margin-left: 10%">
+  <thead>
+  <tr>
+    <th scope="col">#</th>
+    <th scope="col">Name</th>
+    <th scope="col">List Song</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let p of playLists; index as i" >
+    <th scope="row">{{i+1}}</th>
+    <td>{{p.name}}</td>
+    <td> <a [routerLink]="'/songByPlaylist/' + p.id">List Song</a></td>
+  </tr>
+  </tbody>
+</table>
+<br>
+<br>

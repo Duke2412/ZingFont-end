@@ -1,0 +1,26 @@
+<section class="breadcumb-area bg-img bg-overlay" style="background-image: url(assets/img/bg-img/breadcumb.jpg);">
+  <div class="bradcumbContent">
+    <p>See what's </p>
+    <h2>NEW PLAYlIST</h2>
+
+  </div>
+</section>
+<br>
+<form [formGroup]="playlistForm" style="width: 80%; margin-left: 10%; margin-top:3%">
+  <div class="form-group">
+    <label>Name Playlist:</label>
+
+    <input type="text" class="form-control" formControlName="name" placeholder="Enter name">
+    <div *ngIf="name.invalid && (name.dirty || name.touched)"
+         class="alert alert-danger">
+      <div *ngIf="name.errors.required">
+        Playlist Name Not Empty
+      </div>
+    </div>
+  </div>
+  <button  class="btn btn-success" [routerLink]="['/myPlaylist']" style="float:right">Exit</button>
+  <button type="submit" class="btn btn-primary" (click)="submit()" style="float:right; margin-right:1%">Submit</button>
+</form>
+
+<br>
+<br>

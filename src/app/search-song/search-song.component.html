@@ -1,9 +1,8 @@
 
-
 <section class="breadcumb-area bg-img bg-overlay" style="background-image: url(assets/img/bg-img/breadcumb.jpg);">
   <div class="bradcumbContent">
     <p>See what's </p>
-    <h2>SONG FOUND</h2>
+    <h2>FOUND SONG</h2>
   </div>
 </section>
 <br>
@@ -26,10 +25,11 @@
     <td><img src="{{p.cover_art_url}}" alt="" width="50px" height="50px"></td>
     <td>
       <a [routerLink]="'/detail/' + p.songId"  >
-      <h6>{{p.name}}</h6>
-    </a>
+        <h6>{{p.name}}</h6>
+      </a>
     </td>
   </tr>
   </tbody>
 </table>
 <router-outlet></router-outlet>
+

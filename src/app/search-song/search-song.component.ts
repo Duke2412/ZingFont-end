@@ -8,7 +8,7 @@ import {SearchSongsService} from '../service/search-songs.service';
 @Component({
   selector: 'app-search-song',
   templateUrl: './search-song.component.html',
-  styleUrls: ['./search-song.component.css']
+  styleUrls: ['./search-song.component.scss']
 })
 export class SearchSongComponent implements OnInit {
   sub: Subscription;
@@ -20,10 +20,10 @@ export class SearchSongComponent implements OnInit {
     private iSongService: ISongService,
     private searchSongsService: SearchSongsService
   ) {
-    searchSongsService.changeEmitted$.subscribe(x => {
+    searchSongsService.changeEmitted$.subscribe(x =>{
       this.name = x;
-      this.searchSongs();
-    });
+      this.searchSongs()
+    })
   }
 
   ngOnInit(): void {
@@ -39,3 +39,4 @@ export class SearchSongComponent implements OnInit {
     });
   }
 }
+

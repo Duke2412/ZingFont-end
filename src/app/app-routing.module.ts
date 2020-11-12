@@ -10,8 +10,8 @@ import {EditSongComponent} from './crudSong/edit-song/edit-song.component';
 import {DeleteSongComponent} from './crudSong/delete-song/delete-song.component';
 import {DetailSongComponent} from './crudSong/detail-song/detail-song.component';
 
-import {PlaymusicComponent} from "./playmusic/playmusic.component";
-import {LoginComponent} from "./login/login.component";
+import {PlaymusicComponent} from './playmusic/playmusic.component';
+import {LoginComponent} from './login/login.component';
 import {SearchSongComponent} from './search-song/search-song.component';
 import {ListArtistComponent} from './crudArtist/list-artist/list-artist.component';
 import {CreateArtistComponent} from './crudArtist/create-artist/create-artist.component';
@@ -22,7 +22,7 @@ import {ListPlaylistComponent} from './crudPlaylist/list-playlist/list-playlist.
 import {CreatePlaylistComponent} from './crudPlaylist/create-playlist/create-playlist.component';
 import {EditPlaylistComponent} from './crudPlaylist/edit-playlist/edit-playlist.component';
 import {SongbyplaylistComponent} from './songbyplaylist/songbyplaylist.component';
-import {AllPlayListComponent} from "./crudPlaylist/all-play-list/all-play-list.component";
+import {AllPlayListComponent} from './crudPlaylist/all-play-list/all-play-list.component';
 
 
 const routes: Routes = [

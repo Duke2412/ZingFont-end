@@ -65,12 +65,6 @@ export class ISongService {
   createArtist(artist: IArtist): Observable<IArtist>{
     return this.http.post<IArtist>(API_URL2 + `/create-artist`, artist);
   }
-  // deleteArtist(id: number): Observable<IArtist>{
-  //   return this.http.delete<IArtist>(API_URL2 + `/delete-artist/${id}`);
-  // }
-  // getArtistByID(id: number): Observable<IArtist> {
-  //   return this.http.get<IArtist>(API_URL2 + `/${id}`)
-  // }
 }
 
 

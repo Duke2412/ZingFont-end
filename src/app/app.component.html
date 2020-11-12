@@ -21,7 +21,7 @@
       <a class="nav-link" [routerLink]="''" style="color:#062c33;font-size: 17px">HOME <span
         class="sr-only">(current)</span></a>
 
-      <a class="nav-link" [routerLink]="'/allPlaylists'" style="color: #062c33;font-size: 17px">PLAY LIST</a>
+      <a class="nav-link" [routerLink]="'/allPlaylists'" style="color: #062c33;font-size: 17px">PLAYLIST</a>
 
       <a class="nav-link" [routerLink]="'/top30'" style="color: #062c33;font-size: 17px">TOP 30</a>
 
@@ -61,7 +61,7 @@
             <div class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#"  role="button" data-toggle="dropdown"
                  aria-haspopup="true" aria-expanded="false">
-                Hi: {{loginRequest.username}}
+                Welcome: {{loginRequest.username}}
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <a class="dropdown-item" [routerLink]="'/personal'">Personal Music</a>

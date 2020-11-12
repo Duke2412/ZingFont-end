@@ -20,10 +20,10 @@ export class SearchSongComponent implements OnInit {
     private iSongService: ISongService,
     private searchSongsService: SearchSongsService
   ) {
-    searchSongsService.changeEmitted$.subscribe(x =>{
+    searchSongsService.changeEmitted$.subscribe(x => {
       this.name = x;
-      this.searchSongs()
-    })
+      this.searchSongs();
+    });
   }
 
   ngOnInit(): void {

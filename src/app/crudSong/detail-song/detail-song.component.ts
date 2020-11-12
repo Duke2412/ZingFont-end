@@ -9,7 +9,7 @@ import {ShareEventService} from '../../service/share-event.service';
 @Component({
   selector: 'app-detail-song',
   templateUrl: './detail-song.component.html',
-  styleUrls: ['./detail-song.component.scss']
+  styleUrls: ['./detail-song.component.css']
 })
 export class DetailSongComponent implements OnInit {
   song: ISong;

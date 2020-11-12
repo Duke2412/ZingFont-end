@@ -5,7 +5,7 @@ import {IplaylistService} from "../../service/iplaylist.service";
 @Component({
   selector: 'app-all-play-list',
   templateUrl: './all-play-list.component.html',
-  styleUrls: ['./all-play-list.component.scss']
+  styleUrls: ['./all-play-list.component.css']
 })
 export class AllPlayListComponent implements OnInit {
   playLists: IPlayList[] = [];

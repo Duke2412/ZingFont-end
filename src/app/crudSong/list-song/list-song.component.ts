@@ -8,7 +8,7 @@ import {Iuser} from '../../interface/iuser';
 @Component({
   selector: 'app-list-song',
   templateUrl: './list-song.component.html',
-  styleUrls: ['./list-song.component.scss']
+  styleUrls: ['./list-song.component.css']
 })
 export class ListSongComponent implements OnInit {
   user: Iuser = {

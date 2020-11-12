@@ -13,7 +13,7 @@ import {ShareEventService} from '../service/share-event.service';
 @Component({
   selector: 'app-baimoitao30',
   templateUrl: './baimoitao30.component.html',
-  styleUrls: ['./baimoitao30.component.scss']
+  styleUrls: ['./baimoitao30.component.css']
 })
 export class Baimoitao30Component implements OnInit {
 

@@ -13,7 +13,7 @@ import {ShareEventService} from '../service/share-event.service';
 @Component({
   selector: 'app-top30',
   templateUrl: './top30.component.html',
-  styleUrls: ['./top30.component.scss']
+  styleUrls: ['./top30.component.css']
 })
 export class Top30Component implements OnInit {
 

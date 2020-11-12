@@ -27,14 +27,6 @@
       <td><a [routerLink]="'/detail/' + item.songId">{{item.name}}</a></td>
       <td><img src="{{item.cover_art_url}}" alt="" width="30px" height="30px"></td>
       <td>{{item.artist.name}}</td>
-<!--      <td>-->
-<!--        <div *ngIf="loginRequest!=null; else tmp">-->
-<!--        <a [routerLink]="'/edit/' + item.songId">edit</a> | <a [routerLink]="'/delete/' + item.songId">delete</a>-->
-<!--        </div>-->
-<!--        <ng-template #tmp>-->
-<!--         <p>Please Login...</p>-->
-<!--        </ng-template>-->
-<!--      </td>-->
       <td>
             <button class="fa fa-play" (click)="playSong(item.songId)">
 

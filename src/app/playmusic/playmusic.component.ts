@@ -12,7 +12,7 @@ import {isLineBreak} from 'codelyzer/angular/sourceMappingVisitor';
 @Component({
   selector: 'app-playmusic',
   templateUrl: './playmusic.component.html',
-  styleUrls: ['./playmusic.component.scss']
+  styleUrls: ['./playmusic.component.css']
 })
 export class PlaymusicComponent implements OnInit {
   audioFile = new Audio();

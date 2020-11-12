@@ -10,7 +10,7 @@ import {ShareEventService} from '../../service/share-event.service';
 @Component({
   selector: 'app-artist-list-song',
   templateUrl: './artist-list-song.component.html',
-  styleUrls: ['./artist-list-song.component.scss']
+  styleUrls: ['./artist-list-song.component.css']
 })
 export class ArtistListSongComponent implements OnInit {
   songs: ISong[] = [];

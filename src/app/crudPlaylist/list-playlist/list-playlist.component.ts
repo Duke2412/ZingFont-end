@@ -6,7 +6,7 @@ import {IplaylistService} from '../../service/iplaylist.service';
 @Component({
   selector: 'app-list-playlist',
   templateUrl: './list-playlist.component.html',
-  styleUrls: ['./list-playlist.component.scss']
+  styleUrls: ['./list-playlist.component.css']
 })
 export class ListPlaylistComponent implements OnInit {
 

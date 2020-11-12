@@ -12,7 +12,7 @@ import {ShareEventService} from '../service/share-event.service';
 @Component({
   selector: 'app-songbyplaylist',
   templateUrl: './songbyplaylist.component.html',
-  styleUrls: ['./songbyplaylist.component.scss']
+  styleUrls: ['./songbyplaylist.component.css']
 })
 export class SongbyplaylistComponent implements OnInit {
 

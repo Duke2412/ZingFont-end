@@ -9,7 +9,7 @@ import {Router} from '@angular/router';
 @Component({
   selector: 'app-list-artist',
   templateUrl: './list-artist.component.html',
-  styleUrls: ['./list-artist.component.scss']
+  styleUrls: ['./list-artist.component.css']
 })
 export class ListArtistComponent implements OnInit {
   artist: IArtist = {

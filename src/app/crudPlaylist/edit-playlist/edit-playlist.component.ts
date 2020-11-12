@@ -7,7 +7,7 @@ import {ActivatedRoute, Router} from '@angular/router';
 @Component({
   selector: 'app-edit-playlist',
   templateUrl: './edit-playlist.component.html',
-  styleUrls: ['./edit-playlist.component.scss']
+  styleUrls: ['./edit-playlist.component.css']
 })
 export class EditPlaylistComponent implements OnInit {
 

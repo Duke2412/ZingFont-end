@@ -8,7 +8,7 @@ import {SearchSongsService} from '../service/search-songs.service';
 @Component({
   selector: 'app-search-song',
   templateUrl: './search-song.component.html',
-  styleUrls: ['./search-song.component.scss']
+  styleUrls: ['./search-song.component.css']
 })
 export class SearchSongComponent implements OnInit {
   sub: Subscription;

@@ -7,7 +7,7 @@ import {CookieService} from "ngx-cookie-service";
 @Component({
   selector: 'app-likenhieunhat10bai',
   templateUrl: './likenhieunhat10bai.component.html',
-  styleUrls: ['./likenhieunhat10bai.component.scss']
+  styleUrls: ['./likenhieunhat10bai.component.css']
 })
 export class Likenhieunhat10baiComponent implements OnInit {
   songListLike6: ISong[] = [];

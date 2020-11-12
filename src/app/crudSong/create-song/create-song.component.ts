@@ -14,7 +14,7 @@ import {IArtist} from '../../interface/iartist';
 @Component({
   selector: 'app-create-song',
   templateUrl: './create-song.component.html',
-  styleUrls: ['./create-song.component.scss']
+  styleUrls: ['./create-song.component.css']
 })
 export class CreateSongComponent implements OnInit {
 

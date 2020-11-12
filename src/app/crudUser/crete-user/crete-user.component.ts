@@ -6,7 +6,7 @@ import {IuserService} from '../../service/iuser.service';
 @Component({
   selector: 'app-crete-user',
   templateUrl: './crete-user.component.html',
-  styleUrls: ['./crete-user.component.scss']
+  styleUrls: ['./crete-user.component.css']
 })
 export class CreteUserComponent implements OnInit {
 

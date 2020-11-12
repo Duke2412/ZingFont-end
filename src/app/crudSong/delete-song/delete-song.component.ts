@@ -8,7 +8,7 @@ import {ISongService} from '../../service/isong.service';
 @Component({
   selector: 'app-delete-song',
   templateUrl: './delete-song.component.html',
-  styleUrls: ['./delete-song.component.scss']
+  styleUrls: ['./delete-song.component.css']
 })
 export class DeleteSongComponent implements OnInit {
   song: ISong;

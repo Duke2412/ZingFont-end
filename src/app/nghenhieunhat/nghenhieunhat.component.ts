@@ -7,7 +7,7 @@ import {CookieService} from "ngx-cookie-service";
 @Component({
   selector: 'app-nghenhieunhat',
   templateUrl: './nghenhieunhat.component.html',
-  styleUrls: ['./nghenhieunhat.component.scss']
+  styleUrls: ['./nghenhieunhat.component.css']
 })
 export class NghenhieunhatComponent implements OnInit {
   songList6: ISong[] = [];

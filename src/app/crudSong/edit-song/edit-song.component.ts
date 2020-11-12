@@ -15,7 +15,7 @@ import {IArtist} from '../../interface/iartist';
 @Component({
   selector: 'app-edit-song',
   templateUrl: './edit-song.component.html',
-  styleUrls: ['./edit-song.component.scss']
+  styleUrls: ['./edit-song.component.css']
 })
 export class EditSongComponent implements OnInit {
 

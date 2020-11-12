@@ -13,7 +13,7 @@ import {observable, Observable} from "rxjs";
 @Component({
   selector: 'app-baimoitao',
   templateUrl: './baimoitao.component.html',
-  styleUrls: ['./baimoitao.component.scss']
+  styleUrls: ['./baimoitao.component.css']
 })
 export class BaimoitaoComponent implements OnInit {
   songListDate6: ISong[] = [];

@@ -9,15 +9,25 @@
 <br>
 <form [formGroup]= "artistFrom" style="width: 80%; margin-left: 10%; margin-top:3%">
   <div class="form-group">
-    <label>Song Name</label>
+    <label>Artist Name</label>
     <input type="text" class="form-control" formControlName="name" placeholder="Enter name">
     <div *ngIf="name.invalid && (name.dirty || name.touched)"
          class="alert alert-danger">
       <div *ngIf="name.errors.required">
-        Song Name Not Empty
+        Artist Name Not Empty
       </div>
     </div>
-
+    <div>
+      <label>Choose Cover Art Photo</label>
+      <input type="file" class="form-control" (change)="checkCoverArtFile($event)" placeholder="Cover Art">
+      <br>
+      <div *ngIf="checkedCoverArtFile" class="alert alert-danger">
+        Just image file only
+      </div>
+      <div *ngIf="message2" class="alert alert-success" style="height:40px">
+        <p style="font-size:20px; margin-top: -15px">{{message2}}</p>
+      </div>
+    </div>
   </div>
   <button  class="btn btn-success" [routerLink]="['/artist']" style="float:right">Exit</button>
   <button type="submit" [disabled]="checkform()"  class="btn btn-primary"

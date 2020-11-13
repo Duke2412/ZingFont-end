@@ -6,31 +6,42 @@
 </section>
 <br>
 <br>
-
 <div style="width: 90%;margin-left: 5%">
-  <a class="btn btn-outline-primary" [routerLink]="['/personal']">Back to list</a>
-  <br>
-  <br>
   <h3>Song detail:</h3>
-  <div *ngIf="song">
-    <div>
-    <span class="font-weight-bold"></span>
-      <div class="col-12 col-sm-6 col-md-4 col-lg-2">
-      <div class="single-album-area wow fadeInUp" data-wow-delay="100ms">
-      <div class="album-thumb">
-        <img src="{{song.cover_art_url}}" alt="" style="width: 200px;height: 200px"><br>
-        <div class="play-icon">
-          <a class="video--play--btn" (click)="playSong(song.songId)"><span class="icon-play-button"></span></a>
+  <a class="btn btn-outline-primary" [routerLink]="['/personal']">Back to list</a>
+    <table class="table table-bordered table-hover" style="margin-top: 5%">
+      <thead>
+      <td>Cover Art</td>
+      <td>Infomation</td>
+      </thead>
+      <tbody>
+      <td>
+        <div *ngIf="song">
+          <div>
+            <span class="font-weight-bold"></span>
+            <div class="col-5 col-sm-6 col-md-6">
+              <div class="single-album-area wow fadeInUp" data-wow-delay="100ms">
+                <div class="album-thumb">
+                  <img src="{{song.cover_art_url}}" alt="" style="width: 300px;height: 300px"><br>
+                  <div class="play-icon">
+                    <a class="video--play--btn" (click)="playSong(song.songId)"><span class="icon-play-button"></span></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-      </div>
-      </div>
-    </div>
-
-    <span class="font-weight-bold">Name: </span><span>{{song.name}}</span><br>
-    <span class="font-weight-bold">Date:</span><span>{{song.date}}</span><br>
-    <span class="font-weight-bold">Genre:</span><span>{{song.genre}}</span><br>
-    <span class="font-weight-bold">Artist: </span><span>{{song.artist.name}}</span><br>
-    <span class="font-weight-bold">Description: </span><span>{{song.description}}</span><br>
-  </div>
+      </td>
+      <td>
+        <div style="font-size: larger">
+          <span class="font-weight-bold">Name: </span><span>{{song.name}}</span><br>
+          <span class="font-weight-bold">Date:</span><span>{{song.date}}</span><br>
+          <span class="font-weight-bold">Genre:</span><span>{{song.genre}}</span><br>
+          <span class="font-weight-bold">Artist: </span><span  [routerLink]="'/listByArtist/' + song.artist.id">{{song.artist.name}}</span><br>
+          <span class="font-weight-bold">Description: </span><span>{{song.description}}</span><br>
+        </div>
+      </td>
+      </tbody>
+    </table>
 </div>
+

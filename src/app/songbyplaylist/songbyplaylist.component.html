@@ -26,9 +26,11 @@
       <h6>{{p.name}}</h6>
     </a>
     </td>
-    <td>
-      <button class="fa fa-play" (click)="playSong(p.songId)"></button>
-    </td>
+    <div >
+      <button class="btn btn-outline-primary" (click)="playSong(p.songId)"><img
+        src="../../assets/img/bg-img/control+media+multimedia+music+options+play+play+button+player-1320185653542985681.png"
+        height="25" width="25"/></button>
+    </div>
     <td>
       <div *ngIf=" loginRequest != null && loginRequest.id == playlist.user.userId; else msp">
         <button  class="btn btn-danger"  (click)="delete(p)">Delete</button>

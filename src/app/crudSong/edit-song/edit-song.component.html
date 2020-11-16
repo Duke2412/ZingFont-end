@@ -44,18 +44,6 @@
         <p style="font-size:20px; margin-top: -15px">{{message2}}</p>
       </div>
     </div>
-    <div>
-      <label>Choose Song</label>
-      <input type="file" class="form-control" (change)="checkFile($event)"  placeholder="songFile">
-      <br>
-      <div *ngIf="checkSongFile" class="alert alert-danger">
-        Just mp3 file only
-      </div>
-    </div>
-    <br>
-    <div class="progress" *ngIf="process$  as progress">
-      <div class="progress-bar progress-bar-animated" [ngStyle]="{ 'width': progress + '%' }"></div>
-    </div>
     <br>
     <div *ngIf="message" class="alert alert-success" style="height:40px">
       <p style="font-size:20px; margin-top: -15px">{{message}}</p>

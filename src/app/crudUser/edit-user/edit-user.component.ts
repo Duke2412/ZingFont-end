@@ -12,7 +12,7 @@ import {IuserService} from '../../service/iuser.service';
 })
 export class EditUserComponent implements OnInit {
 
-  user: Iuser = null;
+  user: Iuser = {};
   userForm: FormGroup;
   loginRequest: Iloginrequest;
 
@@ -22,7 +22,7 @@ export class EditUserComponent implements OnInit {
               private router: Router, ) { }
 
   ngOnInit(): void {
-    this.loginRequest = JSON.parse((sessionStorage.getItem('rbnbuser')));
+    this.loginRequest = JSON.parse((sessionStorage.getItem('user')));
     console.log(this.loginRequest);
     this.getUserById(this.loginRequest.id);
     this.userForm = this.fb.group({

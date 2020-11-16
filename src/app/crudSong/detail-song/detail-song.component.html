@@ -35,9 +35,8 @@
       <td>
         <div style="font-size: larger">
           <span class="font-weight-bold">Name: </span><span>{{song.name}}</span><br>
-          <span class="font-weight-bold">Date:</span><span>{{song.date}}</span><br>
           <span class="font-weight-bold">Genre:</span><span>{{song.genre}}</span><br>
-          <span class="font-weight-bold">Artist: </span><span  [routerLink]="'/listByArtist/' + song.artist.id">{{song.artist.name}}</span><br>
+          <span class="font-weight-bold">Artist: </span><span  [routerLink]="'/listByArtist/' + song.artist.id" style="color: red">{{song.artist.name}}</span><br>
           <span class="font-weight-bold">Description: </span><span>{{song.description}}</span><br>
         </div>
       </td>

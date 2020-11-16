@@ -37,7 +37,7 @@ export class SearchSongComponent implements OnInit {
 
   searchSongs() {
     this.iSongService.searchSongByName(this.name).subscribe(p => {
-      this.songs = p
+      this.songs = p;
       if (this.songs.length == 0) {
         this.message = "Your Song Doesn't exist";
       } else this.message = null;

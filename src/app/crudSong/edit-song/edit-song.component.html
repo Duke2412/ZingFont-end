@@ -11,7 +11,7 @@
 
 <form [formGroup]= "songForm" style="width: 60%; margin-left: 20%; margin-top:3%">
   <div class="form-group">
-    <label>Song Name</label>
+    <label>Song Name<span style="color: red">*</span></label>
     <input type="text" class="form-control" formControlName="name" placeholder="Enter name">
     <div *ngIf="name.invalid && (name.dirty || name.touched)"
          class="alert alert-danger">
@@ -20,7 +20,7 @@
       </div>
     </div>
     <div class="form-group" >
-      <label>Artist</label>
+      <label>Artist <span style="color: red">*</span></label>
       <select class="form-control" #artist  (change)="getArtist(artist.value)">
         <option *ngFor="let item of artists" [selected]="song.artist != null && item.id == song.artist.id" [value]="item.id">{{item.name}}</option>
       </select>
@@ -34,7 +34,7 @@
       <textarea class="form-control " formControlName="description" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter description" rows="2" cols="5"></textarea>
     </div>
     <div>
-      <label>Cover Art</label>
+      <label>Cover Art<span style="color: red">*</span></label>
       <input type="file" class="form-control" (change)="checkCoverArtFile( $event)" placeholder="Cover Art">
       <br>
       <div *ngIf="checkedCoverArtFile" class="alert alert-danger">

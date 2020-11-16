@@ -9,7 +9,7 @@
 <br>
 <form [formGroup]= "artistFrom" style="width: 80%; margin-left: 10%; margin-top:3%">
   <div class="form-group">
-    <label>Artist Name</label>
+    <label>Artist Name <span style="color: red">*</span></label>
     <input type="text" class="form-control" formControlName="name" placeholder="Enter name">
     <div *ngIf="name.invalid && (name.dirty || name.touched)"
          class="alert alert-danger">

@@ -9,7 +9,7 @@
 <form [formGroup]="playlistForm" style="width: 80%; margin-left: 10%; margin-top:3%">
   <div class="form-group">
     <input type="text" class="form-control" [ngModel]="playlist.id"  formControlName="id" hidden>
-    <label>Playlist Name:</label>
+    <label>Playlist Name<span style="color: red">*</span></label>
     <input type="text" class="form-control" [ngModel]="playlist.name" placeholder="Enter name" formControlName="name">
   </div>
   <button  class="btn btn-success" [routerLink]="['/myPlaylist']" style="float:right">Exit</button>

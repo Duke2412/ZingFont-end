@@ -8,7 +8,7 @@
 <br>
 <form [formGroup]="userForm" style="width: 80%; margin-left: 10%; margin-top:3%">
   <div class="form-group">
-    <label>User Name:</label>
+    <label>User Name <span style="color: red">*</span></label>
     <input type="text" class="form-control" formControlName="name" placeholder="Enter name">
     <div *ngIf="nameUser.invalid && (nameUser.dirty || nameUser.touched)"
          class="alert alert-danger">
@@ -18,7 +18,7 @@
     </div>
   </div>
   <div class="form-group">
-    <label>Email:</label>
+    <label>Email<span style="color: red">*</span></label>
     <input type="text" class="form-control" formControlName="email" placeholder="Enter email">
     <div *ngIf="emailUser.invalid && (nameUser.dirty || nameUser.touched)"
          class="alert alert-danger">
@@ -29,7 +29,7 @@
         Invalid email
       </div>
     </div>
-    <label>Password:</label>
+    <label>Password<span style="color: red">*</span></label>
     <input type="password" class="form-control" formControlName="password" placeholder="Enter password">
     <div *ngIf="passWordUser.invalid && (nameUser.dirty || nameUser.touched)"
          class="alert alert-danger">
